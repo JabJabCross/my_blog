@@ -1,0 +1,15 @@
+---
+title: "À propos"
+image: R_logo.jpeg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/ugo-gestin-180063265/
+    - icon: github
+      text: Github
+      href: https://github.com/JabJabCross
+---
+
+About this blog

@@ -1,0 +1,10 @@
+---
+title: "Bienvenue sur mon Blog"
+author: "Ugo Gestin"
+date: "2024-02-21"
+categories: [news]
+---
+
+Voila le premier post de mon premier Blog sur R.
+
+![ça fait rêver !](Ecran_R.jpeg)
