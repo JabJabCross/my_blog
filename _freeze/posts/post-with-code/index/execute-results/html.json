@@ -1,0 +1,14 @@
+{
+  "hash": "36868072f3302a182756e77b72ad1e5b",
+  "result": {
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2024-02-21\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\n## Librairie OlympicsWeather\n\nCette fonction permet d'obtenir les prévisions météorologiques en fonction de l'entrée fournie, qui peut être une adresse de type character ou des coordonnées géographiques de type numeric de taille 2. Si une adresse est fournie, elle est convertie en coordonnées géographiques à l'aide de la fonction get_forecast.character. Si des coordonnées géographiques sont fournies, elles sont utilisées directement. Ensuite, les prévisions météorologiques sont obtenues à partir des coordonnées géographiques à l'aide de la fonction get_forecast.numeric.\n\nAvant de pouvoir installer un package directement depuis GitHub, vous devez vous assurer que le package remotes est installé sur votre système. Si ce n'est pas le cas, vous pouvez l'installer en exécutant la commande suivante :\n\n::: {.cell}\n\n```{.r .cell-code}\ninstall.packages(\"remotes\")\n```\n:::\n\n\nUne fois que le package remotes est installé, vous pouvez utiliser sa fonction install_github() pour installer un package directement depuis GitHub. Voici comment vous pouvez le faire :\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"JabJabCross/olympicsWeather\")\n```\n:::\n\n\n### Prévisions pour le Stade de France\n\n::: {.cell}\n\n```{.r .cell-code}\nmeteo_SdF <- olympicsWeather::get_forecast(\"stade de France\")\nview(meteo_SdF)\n```\n:::\n\nLe bloc de code ci-dessus permet ainsi de faire s'afficher les prévisions météos à 7 jours pour le stade de France.\n\n### Prévisions pour Tahiti\n\n::: {.cell}\n\n```{.r .cell-code}\nmeteo_Tahiti <- olympicsWeather::get_forecast(\"Tahiti\")\nview(meteo_Tahiti)\n```\n:::\n\nOn peut appliquer la même méthode pour obtenir les prévisions météos de Tahiti.\n\n### Prévisions pour des cordonées GPS\n\n::: {.cell}\n\n```{.r .cell-code}\nmeteo_GPS <- olympicsWeather::get_forecast(c(43.276703, 5.334791))\nview(meteo_GPS)\n```\n:::\n\nCette fois, on applique la fonction à des coordonnées GPS.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
