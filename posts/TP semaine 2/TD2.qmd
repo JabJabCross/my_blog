@@ -45,7 +45,6 @@ lapply(c(data_medailles_sport_ete$Editions, data_medailles_sport_ete$Epreuves_20
 
 colonnes_int <- c("Editions", "Epreuves_2020", "Or", "Argent", "Bronze", "Total")
 data_medailles_sport_ete[colonnes_int] <- lapply(data_medailles_sport_ete[colonnes_int], as.integer)
-str(data_medailles_sport_ete)
 ```
 
 ## Question 3 :
@@ -63,7 +62,7 @@ Les disciplines ayant distribués le plus de médailles distribués sont donc l'
 Quelles sont les disciplines avec le moins d'épreuves en 2020 ?
 
 ```{r}
-moins_epreuve <- data_medailles_sport_ete |>  filter( Epreuves_2020 == min(Epreuves_2020))
+moins_epreuve <- data_medailles_sport_ete |>  dplyr::filter( Epreuves_2020 == min(Epreuves_2020))
 print(moins_epreuve)
 ```
 
@@ -108,10 +107,7 @@ calcul_nb_editions_str <- function(chaine_cara){
    if (grepl("-", vecteur_date[i])){
      addition1 = addition1 + (as.numeric(substr(vecteur_date[i], start = 5, stop = 9))
                               - as.numeric(substr(vecteur_date[[i]], start = 1, stop = 4))) / 4
-     if ((as.numeric(substr(vecteur_date[[i]], start = 1, stop = 4))) > 1917 & (as.numeric(substr(vecteur_date[i], start = 5, stop = 9)) 
-  
-         
-     }else if(grepl("depuis", vecteur_date[i])){
+   }else if(grepl("depuis", vecteur_date[i])){
      date_origine = as.numeric(substr(vecteur_date[i], start = 9, stop = 12))
      parutions_theoriques = (2024 - date_origine)/4
      if (date_origine < 1917){
