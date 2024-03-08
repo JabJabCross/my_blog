@@ -131,10 +131,4 @@ calcul_nb_editions_str("1896, 1904, depuis 1920")
 
 Cette fois, la fonction prend pour argument des chaines de caractères. De plus, elle renvoie bien 26 lorqu'on lui passe l'argument : "1896, 1904, depuis 1920".
 
-## Question 7 :
 
-Définissez une fonction générique calcul_nb_editions et deux implémentations calcul_nb_editions.integer et 'calcul_nb_editions.character.
-
-```{r}
-
-```
